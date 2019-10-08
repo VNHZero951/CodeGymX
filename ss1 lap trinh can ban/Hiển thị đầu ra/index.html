@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Hien Thi Dau Ra</title>
+    </head>
+    <body>
+        <p>Bài 1</p>
+        <button type="button" onclick="showmessage();">Click me!</button>
+        <script>
+            function showmessage(){
+                alert('Xin Chào');
+            }
+        </script>
+        <p>Bài 2</p>
+        <div id="messDiv"></div>
+            <button type="button" onclick="b2();">Click Me!!</button>
+            <script>
+                function b2(){
+                    document.getElementById('messDiv').innerHTML = 'Xin Chào !!!';
+                }
+            </script>
+        <p>Bài 3</p>
+        <button type="button" onclick="b3();">Click Me!</button>
+        <script>
+            function b3(){
+                document.write('Xin Chào');
+            }
+        </script>
+        <p>Bài 4</p>
+        <button type="button" onclick="b4();">Click Me!</button>
+        <script>
+            function b4(){
+                console.log('Xin Chào');
+            }
+        </script>
+    </body>
+</html>

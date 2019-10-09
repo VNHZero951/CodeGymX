@@ -1,25 +1,39 @@
-   <!DOCTYPE html>
-   <html>
-   <head>
-       <title>Ứng dụng chuyển đổi tiền tệ</title>
-       <script src="javascript.js"></script>
-   </head>
-   <body>
-        <input type="text">
-        <br>
-        <select name="" id="from">
-            <option value="VND">VND</option>
-            <option value="USD">USD</option>
-        </select>
-        <br>
-        <select name="" id="to">
-            <option value="USD">USD</option>
-            <option value="VND">VND</option>
-        </select>
-        <br>
-        <input type="submit" value="Convert">
-   </body>
-   </html> 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+</head>
 
-   
+<body>
+    <table border="0px" width="500px">
+        <tr>
+            <th width="100">Amount</th>
+            <th width="120">From Currency</th>
+            <th width="120">To Currency</th>
+        </tr>
+    </table>
+    <form>
+        <input type="text" id="input" size="18">
+        <select name="" id="Sel_1">
+            <option value="VND">Viet Nam</option>
+            <option value="USD">USD</option>
+            <option value="" hidden>---------------------------------</option>
+        </select>
+        <select name="" id="Sel_2">
+            <option value="USD">USD</option>
+            <option value="VND">Viet Nam</option>
+            <option value="" hidden>---------------------------------</option>
+        </select>
+        <!--<button id="ketqua" onclick="chuyentien()">Click</button>-->
+        <button type="button" onclick="chuyentien()">Convert</button>
+    </form>
+    <Div id="ketqua" style="color: blue">Result : </Div>
+    <!--<button onclick="chuyentien()">Convert</button>-->
+</body>
+
+</html>

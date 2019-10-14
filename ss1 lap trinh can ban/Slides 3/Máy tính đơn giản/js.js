@@ -1,14 +1,14 @@
+function xoa() {
+    document.getElementById("input").value = "";
+}
+
 function add(num) {
     document.getElementById("input").value = document.getElementById("input").value + num;
 }
 
-function clear() {
-    document.getElementById("input").value = "";
-}
-
-function equal() {
+function ketqua() {
     let exp = document.getElementById("input").value;
     if (exp) {
-        document.getElementById("input").value = equal(exp);
+        exp = document.getElementById("input").value = eval(exp)
     }
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="i-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("input");
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWiYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwiyz';
+        let result = [];
+        for (let i = 0; i < input.length; i++) {
+            if (UPPER.includes(input[i])) {
+                result.push(input[i].toLowerCase());
+            } else if (LOWER.includes(input[i])) {
+                result.push(input[i].toUpperCase());
+            } else {
+                result.push(input[i]);
+            }
+        }
+        document.write(result.join(''));
+    </script>
+</body>
+
+</html>

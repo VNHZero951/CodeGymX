@@ -13,24 +13,19 @@
         <input type="text" id="input">
         <button type="button" value="Submit" onclick="chuyen()">Submit</button>
         <div id="result"></div>
-        <script>
-            let eng = ["What", "Your", "Name"];
-            let vie = ["Toi", "Tên", "Là"];
-
-            function chuyen() {
-                let input = document.getElementById("input").value;
-                for (let i = 0; i < eng.length; i++) {
-                    if (input === eng[i]) {
-                        document.getElementById("result").innerHTML = vie[i];
-                    } else {
-                        document.getElementById("result").innerHTML = "Not Found!!";
-                    }
-
-                }
-            }
-        </script>
     </form>
     <script>
+        let eng = ["Hello", "Your", "Name"];
+        let vie = ["Xin Chào", "Bạn", "Tên"];
+
+        function chuyen() {
+            let input = document.getElementById("input").value;
+            for (let i = 0; i < eng.length; i++) {
+                if (input === eng[i]) {
+                    document.getElementById("result").innerHTML = vie[i];
+                }
+            }
+        }
     </script>
 </body>
 

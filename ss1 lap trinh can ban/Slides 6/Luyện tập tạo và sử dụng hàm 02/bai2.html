@@ -10,16 +10,18 @@
 
 <body>
     <script>
-        let a = [10];
-        for (let i = 0; i < 10; i++) {
-            a[i] = prompt("input array");
+        function perimeter(r) {
+            let c = 2 * Math.PI * r;
+            return c;
         }
-        let v = prompt("input V");
-        if (v < a.length - 1) {
-            document.write("V is in the array");
-        } else {
-            document.write("V is not in the array");
+
+        function area(r) {
+            let s = Math.pow(r, 2) * Math.PI;
+            return s;
         }
+        r = +prompt("input R : ")
+        alert(perimeter(r));
+        alert(area(r));
     </script>
 </body>
 

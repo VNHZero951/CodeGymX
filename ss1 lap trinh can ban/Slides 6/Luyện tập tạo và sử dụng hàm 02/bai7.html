@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Cách 1
+        function swap(a, b) {
+            var temp = a.value;
+            a.value = b.value;
+            b.value = temp;
+        }
+        var a = {
+            value: 5
+        };
+        var b = {
+            value: 10
+        };
+        swap(a, b);
+        document.write("a = " + a.value + ", b = " + b.value);
+        //Cách 2 ES6+ 
+        // function swap(a, b) {
+        //     [b, a] = [a, b]
+        //     alert(a);
+        //     alert(b);
+        // }
+        // swap(+prompt("input a :"), +prompt("input b :"));
+        //Cách 3
+        // function swapTheNumber(a, b) {
+        //     a = a + b;
+        //     b = a - b;
+        //     a = a - b;
+        //     alert(a);
+        //     alert(b);
+        // }
+        // swapTheNumber(+prompt("input a :"), +prompt("input b :"));
+    </script>
+</body>
+
+</html>

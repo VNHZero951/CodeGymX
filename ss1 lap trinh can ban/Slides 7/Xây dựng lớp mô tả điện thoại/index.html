@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset id="Phone_1">
+            <legend>Iphone</legend>
+            <div id="Pin">Pin : 100%</div>
+            Messenger : <input type="text" id="input">
+            <div id="Messenger"></div>
+            <button>Send SMS</button>
+            <button>Receive SMS</button>
+            <button>Inbox</button>
+            <button>Reset</button>
+            <button>Turn ON/OFF</button>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Nokia</legend>
+            <div id="Pin">Pin : 100%</div>
+            Messenger : <input type="text">
+            <div id="Messenger"></div>
+            <button onclick="phone.sendSMS()">Send SMS</button>
+            <button onclick="phone.ReSMS()">Receive SMS</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="turnOff()">Turn ON/OFF</button>
+
+        </fieldset>
+    </form>
+    <script>
+        let phone = function phone() {
+            this.sendSMS() = function() {
+                let a = [x] = document.getElementById("input").value;
+                alert("Element: " + a[x] + " Added at index " + x);
+                x++;
+                document.getElementById("input").value = "";
+            }
+            this.ReSMS() = function() {
+                let e = "<hr/>";
+                for (let i = 0; i < array.length; i++) {
+                    e += "Element " + i + " = " + array[i] + "<br/>";
+                }
+                document.getElementById("input").innerHTML = e;
+            }
+            this.reset() = function() {
+
+            }
+            this.turnOff() = function() {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

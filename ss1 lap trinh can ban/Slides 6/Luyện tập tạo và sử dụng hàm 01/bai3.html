@@ -10,14 +10,14 @@
 
 <body>
     <script>
-        let a = prompt([]);
-        let vowels = 0;
-        for (let i = 0; i < a.length; i++) {
-            if (a[i] == 'a' || a[i] == 'e' || a[i] == 'i' || a[i] == 'o' || a[i] == 'u') {
-                vowels++;
+        function sum(a, b) {
+            if (a > b) {
+                alert("a > b");
+            } else if (a <= b) {
+                alert(a + b);
             }
         }
-        document.write("Có " + vowels + " Nguyên Âm Trong Chuỗi");
+        sum(+prompt("input a :"), +prompt("input b"));
     </script>
 </body>
 

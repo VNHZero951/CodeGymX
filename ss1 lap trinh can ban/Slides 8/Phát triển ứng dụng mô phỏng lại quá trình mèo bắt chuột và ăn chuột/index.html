@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Mouse = function(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.decrease = function(weight) {
+                if (this.weight > 0) {
+                    this.weight = 0;
+                } else {
+                    alert(Mouse.name + " Is Dead");
+                }
+            };
+            this.getSpeed = function() {
+                return this.speed = speed;
+            }
+            this.talk = function() {
+                console.log("chit-chit");
+            }
+            this.status = function() {
+                if (this.weight > 0) {
+                    console.log(this.name + " " + "Is Live");
+                    return true;
+                } else {
+                    console.log(this.name + " " + "Is Dead");
+                    return false;
+                }
+            }
+        }
+
+        let Cat = function(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.talk = function() {
+                console.log("Moew-Moew");
+            }
+            this.nab = function(Mouse) {
+                if (this.speed > Mouse.getSpeed()) {
+                    console.log(this.name + " Nab " + Mouse.name);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            this.eat = function(Mouse) {
+                if (Mouse.status()) {
+                    Mouse.decrease();
+                    this.weight++
+                        console.log(this.name + " Eat " + Mouse.name);
+
+                } else {
+                    alert(Mouse.name + " Is Dead")
+                }
+            }
+        }
+        let mouse = new Mouse("Jerry", 50, 30);
+        let cat = new Cat("Tom", 50, 40);
+        mouse.talk();
+        mouse.status();
+        cat.talk();
+        cat.nab(mouse);
+        cat.eat(mouse);
+        cat.eat(mouse);
+    </script>
+</body>
+
+</html>

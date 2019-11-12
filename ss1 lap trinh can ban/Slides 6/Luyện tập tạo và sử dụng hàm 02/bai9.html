@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findNumber(arr, x) {
+            let flag = false;
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (x === arr[i]) {
+                    count++;
+                    flag = true;
+                }
+            }
+            if (flag == true) {
+                document.write(count);
+            }
+
+            if (flag == false) {
+                document.write("-1");
+            }
+        }
+
+        let number = +prompt('nhập vào');
+        arr = [1, 2, 3, 4, 4, 51, 1, 1, 12, 32, 121];
+        findNumber(arr, number);
+    </script>
+</body>
+
+</html>

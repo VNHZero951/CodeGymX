@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Remote = function() {
+            // this.code = code;
+            // // this.control = ;
+
+            this.status = false;
+            this.turnOff = function() {
+                this.status = false;
+            }
+            this.turnOn = function() {
+                this.status = true;
+            }
+            this.getVol = function(TiVi) {
+                this.vol = TiVi.setVol();
+            }
+
+
+
+        }
+        let TiVi = function(status, vol) {
+            this.vol = vol;
+            this.status = status;
+            this.setVol = function(vol) {
+                this.vol = vol;
+            }
+            this.switchOff = function(Remote) {;
+                Remote.turnOff();
+                console.log("Turn Off TV");
+            }
+            this.switchOn = function(Remote) {;
+                Remote.turnOn();
+                console.log("Turn On TV");
+            }
+
+        }
+        let remote = new Remote();
+        let tivi = new TiVi(false, 10);
+        console.log(tivi);
+        console.log(remote);
+    </script>
+</body>
+
+</html>

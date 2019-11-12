@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body onload="alert(findStar(prompt('Input Name : ')));">
+    <script>
+        var star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var star2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function findStar(input) {
+            for (let i = 0; i < star.length; i++) {
+                if (input === star[i]) {
+                    return star2[i];
+                }
+            }
+            return "Don't Found Star"
+        }
+        // let result = findStar(prompt("Input Name : "));
+        // alert(result);
+        // alert(findStar(prompt("Input Name : ")));
+    </script>
+</body>
+
+</html>

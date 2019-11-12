@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        let rectangle = function rectangle(length, width) {
+            this.length = length;
+            this.width = width;
+            // this.area = area;
+            // this.perimeter = perimeter;
+            // this.getLength = function() {
+            //     return length;
+            // }
+            // this.getWidth = function() {
+            //     return width;
+            // }
+            this.getArea = function() {
+                return this.length * this.width;
+            }
+            this.getPerimeter = function() {
+                return (this.length + this.width) * 2;
+            }
+            this.draw = function() {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "blue";
+                ctx.fillRect(0, 0, this.length, this.width);
+            }
+        };
+        let rectangle_1 = new rectangle(+prompt("input Length"), +prompt("input Width"));
+        let Area = rectangle_1.getArea();
+        let Perimeter = rectangle_1.getPerimeter()
+            // let c = rectangle.getPerimeter();
+            // alert(Area);
+        rectangle_1.draw();
+    </script>
+</body>
+
+</html>

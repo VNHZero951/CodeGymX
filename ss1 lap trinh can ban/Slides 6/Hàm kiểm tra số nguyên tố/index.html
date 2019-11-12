@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // boolean isPrime(int number)
+
+        function isPrime(number) {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return 0;
+                }
+            }
+            return 1;
+        }
+        let count = isPrime(+prompt("Input Number : "));
+        if (count == 0) {
+            document.write("is not a Prime Number");
+        } else {
+            document.write("is a Prime number");
+        }
+    </script>
+</body>
+
+</html>
